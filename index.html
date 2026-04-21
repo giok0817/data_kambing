@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peternakan Pak Saleh</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Arial;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+}
+
+header{
+  text-align:center;
+  padding:15px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.container{padding:15px;}
+
+/* SLIDER */
+.slider{
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
+  height:70vh;
+}
+
+.slides{
+  display:flex;
+  transition:transform 0.5s ease;
+  height:100%;
+}
+
+.slide{
+  min-width:100%;
+  position:relative;
+  height:100%;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* NAMA */
+.nama{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align:center;
+  padding:15px;
+  background:linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+/* KATEGORI */
+.kategori{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#00c853;
+  padding:5px 10px;
+  border-radius:10px;
+  font-size:12px;
+}
+
+.anak{
+  background:#ff9800;
+}
+
+/* SOLD OUT */
+.sold{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(255,0,0,0.85);
+  color:white;
+  padding:12px 25px;
+  font-weight:bold;
+  font-size:20px;
+  border-radius:10px;
+  letter-spacing:2px;
+}
+
+/* PANAH */
+.prev,.next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  border:none;
+  color:white;
+  font-size:22px;
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+.card{
+  margin-top:15px;
+  background:#ffffff10;
+  padding:15px;
+  border-radius:15px;
+}
+
+.info{
+  font-size:14px;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>🐐 Peternakan Pak Saleh</header>
+
+<div class="container">
+
+<!-- SLIDER -->
+<div class="slider">
+  <div class="slides" id="slides">
+
+    <div class="slide" data-kategori="induk">
+      <img src="salus.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Salus</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="hitam.jpg">
+      <div class="sold">SOLD OUT</div>
+      <div class="kategori">Induk</div>
+      <div class="nama">Hitam</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="hitam2.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Hitam 2</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="rino.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Rino</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="asep.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Asep</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="coklat.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Coklat</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="putih.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Putih</div>
+    </div>
+
+    <div class="slide" data-kategori="anak">
+      <img src="anak-coklat-2.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Anak Coklat 2</div>
+    </div>
+
+    <div class="slide" data-kategori="anak">
+      <img src="anak-coklat-1.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Anak Coklat 1</div>
+    </div>
+
+    <div class="slide" data-kategori="anak">
+      <img src="anak-salus-1.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Anak Salus 1</div>
+    </div>
+
+    <div class="slide" data-kategori="anak">
+      <img src="anak-salus-2.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Anak Salus 2</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="jawa.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">Jawa</div>
+    </div>
+
+    <div class="slide" data-kategori="anak">
+      <img src="anak-jawa.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Anak Jawa</div>
+    </div>
+
+    <div class="slide" data-kategori="anak">
+      <img src="si-kembar.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Si Kembar</div>
+    </div>
+
+    <div class="slide" data-kategori="induk">
+      <img src="white.jpg">
+      <div class="kategori">Induk</div>
+      <div class="nama">White</div>
+    </div>
+	
+	 <div class="slide" data-kategori="anak">
+      <img src="anak-asep.jpg">
+      <div class="kategori anak">Anak</div>
+      <div class="nama">Anak Asep</div>
+    </div>
+
+  </div>
+
+  <button class="prev" onclick="geser(-1)">❮</button>
+  <button class="next" onclick="geser(1)">❯</button>
+</div>
+
+<!-- STATISTIK -->
+<div class="card">
+  <h3>📊 Statistik</h3>
+  <p>Total: <span id="total"></span></p>
+  <p>Induk: <span id="induk"></span></p>
+  <p>Anak: <span id="anak"></span></p>
+</div>
+
+<!-- INFO -->
+<div class="card">
+  <h3>2026</h3>
+  <p class="info">
+    <br><br>
+  </p>
+</div>
+
+</div>
+
+<script>
+let index=0;
+
+function geser(a){
+  const s=document.getElementById("slides");
+  const total=s.children.length;
+
+  index+=a;
+  if(index<0) index=total-1;
+  if(index>=total) index=0;
+
+  s.style.transform="translateX(-"+(index*100)+"%)";
+}
+
+// SWIPE
+let startX=0;
+const slider=document.querySelector(".slider");
+
+slider.addEventListener("touchstart",e=>{
+  startX=e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend",e=>{
+  let endX=e.changedTouches[0].clientX;
+
+  if(startX-endX>50) geser(1);
+  if(endX-startX>50) geser(-1);
+});
+
+// STATISTIK
+function hitung(){
+  const semua=document.querySelectorAll(".slide");
+
+  let total=semua.length;
+  let induk=0;
+  let anak=0;
+
+  semua.forEach(s=>{
+    let k=s.getAttribute("data-kategori");
+    if(k==="induk") induk++;
+    if(k==="anak") anak++;
+  });
+
+  document.getElementById("total").innerText=total;
+  document.getElementById("induk").innerText=induk;
+  document.getElementById("anak").innerText=anak;
+}
+
+hitung();
+</script>
+
+</body>
+</html>
