@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -23,7 +24,6 @@ header{
 
 .container{padding:15px;}
 
-/* SLIDER */
 .slider{
   position:relative;
   overflow:hidden;
@@ -33,7 +33,7 @@ header{
 
 .slides{
   display:flex;
-  transition:transform 0.5s ease;
+  transition:transform .5s ease;
   height:100%;
 }
 
@@ -49,17 +49,15 @@ header{
   object-fit:cover;
 }
 
-/* NAMA */
 .nama{
   position:absolute;
   bottom:0;
   width:100%;
   text-align:center;
   padding:15px;
-  background:linear-gradient(transparent, rgba(0,0,0,0.9));
+  background:linear-gradient(transparent, rgba(0,0,0,.9));
 }
 
-/* KATEGORI */
 .kategori{
   position:absolute;
   top:10px;
@@ -74,13 +72,12 @@ header{
   background:#ff9800;
 }
 
-/* SOLD OUT */
 .sold{
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  background:rgba(255,0,0,0.85);
+  background:rgba(255,0,0,.85);
   color:white;
   padding:12px 25px;
   font-weight:bold;
@@ -89,12 +86,11 @@ header{
   letter-spacing:2px;
 }
 
-/* PANAH */
 .prev,.next{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,.5);
   border:none;
   color:white;
   font-size:22px;
@@ -111,11 +107,66 @@ header{
   background:#ffffff10;
   padding:15px;
   border-radius:15px;
+  backdrop-filter: blur(8px);
 }
 
 .info{
   font-size:14px;
-  opacity:0.8;
+  opacity:.85;
+}
+
+/* VIDEO PLAYER */
+.video-box{
+ margin-top:18px;
+}
+
+.video-title{
+ font-size:20px;
+ margin-bottom:12px;
+}
+
+.video-player-wrap{
+ position:relative;
+ border-radius:18px;
+ overflow:hidden;
+ box-shadow:0 0 20px rgba(0,0,0,.35);
+}
+
+#videoPlayer{
+ width:100%;
+ display:block;
+ background:#000;
+ max-height:75vh;
+}
+
+.video-list{
+ margin-top:15px;
+ display:grid;
+ gap:10px;
+}
+
+.video-btn{
+ width:100%;
+ border:none;
+ background:linear-gradient(45deg,#00c853,#00e676);
+ color:#fff;
+ padding:12px;
+ border-radius:12px;
+ font-weight:bold;
+ cursor:pointer;
+}
+
+.video-note{
+ margin-top:12px;
+ font-size:13px;
+ opacity:.8;
+ line-height:1.6;
+}
+
+@media(max-width:700px){
+.slider{
+ height:58vh;
+}
 }
 </style>
 </head>
@@ -126,139 +177,158 @@ header{
 
 <div class="container">
 
-<!-- SLIDER -->
 <div class="slider">
-  <div class="slides" id="slides">
+<div class="slides" id="slides">
 
-    <div class="slide" data-kategori="induk">
-      <img src="salus.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Salus</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="hitam.jpg" loading="lazy">
-      <div class="sold">SOLD OUT</div>
-      <div class="kategori">Induk</div>
-      <div class="nama">Hitam</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="hitam2.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Hitam 2</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="rino.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Rino</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="asep.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Asep</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="coklat.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Coklat</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="putih.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Putih</div>
-    </div>
-
-    <div class="slide" data-kategori="anak">
-      <img src="anak-coklat-2.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Coklat 2</div>
-    </div>
-
-    <div class="slide" data-kategori="anak">
-      <img src="anak-coklat-1.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Coklat 1</div>
-    </div>
-
-    <div class="slide" data-kategori="anak">
-      <img src="anak-salus-1.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Salus 1</div>
-    </div>
-
-    <div class="slide" data-kategori="anak">
-      <img src="anak-salus-2.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Salus 2</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="jawa.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">Jawa</div>
-    </div>
-
-    <div class="slide" data-kategori="anak">
-      <img src="anak-jawa.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Jawa</div>
-    </div>
-
-    <div class="slide" data-kategori="anak">
-      <img src="si-kembar.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Si Kembar</div>
-    </div>
-
-    <div class="slide" data-kategori="induk">
-      <img src="white.jpg" loading="lazy">
-      <div class="kategori">Induk</div>
-      <div class="nama">White</div>
-    </div>
-	
-	 <div class="slide" data-kategori="anak">
-      <img src="anak-asep.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Asep</div>
-    </div>
-
-	  <div class="slide" data-kategori="anak">
-      <img src="anak-salus3.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Salus 3</div>
-    </div>
-
-	  <div class="slide" data-kategori="anak">
-      <img src="anak-salus4.jpg" loading="lazy">
-      <div class="kategori anak">Anak</div>
-      <div class="nama">Anak Salus 4</div>
-    </div>
-
-  </div>
-
-  <button class="prev" onclick="geser(-1)">❮</button>
-  <button class="next" onclick="geser(1)">❯</button>
+<div class="slide" data-kategori="induk">
+<img src="salus.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Salus</div>
 </div>
 
-<!-- STATISTIK -->
-<div class="card">
-  <h3>📊 Statistik</h3>
-  <p>Total: <span id="total"></span></p>
-  <p>Induk: <span id="induk"></span></p>
-  <p>Anak: <span id="anak"></span></p>
+<div class="slide" data-kategori="induk">
+<img src="hitam.jpg" loading="lazy">
+<div class="sold">SOLD OUT</div>
+<div class="kategori">Induk</div>
+<div class="nama">Hitam</div>
 </div>
 
-<!-- INFO -->
+<div class="slide" data-kategori="induk">
+<img src="hitam2.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Hitam 2</div>
+</div>
+
+<div class="slide" data-kategori="induk">
+<img src="rino.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Rino</div>
+</div>
+
+<div class="slide" data-kategori="induk">
+<img src="asep.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Asep</div>
+</div>
+
+<div class="slide" data-kategori="induk">
+<img src="coklat.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Coklat</div>
+</div>
+
+<div class="slide" data-kategori="induk">
+<img src="putih.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Putih</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-coklat-2.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Coklat 2</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-coklat-1.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Coklat 1</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-salus-1.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Salus 1</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-salus-2.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Salus 2</div>
+</div>
+
+<div class="slide" data-kategori="induk">
+<img src="jawa.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">Jawa</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-jawa.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Jawa</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="si-kembar.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Si Kembar</div>
+</div>
+
+<div class="slide" data-kategori="induk">
+<img src="white.jpg" loading="lazy">
+<div class="kategori">Induk</div>
+<div class="nama">White</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-asep.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Asep</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-salus3.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Salus 3</div>
+</div>
+
+<div class="slide" data-kategori="anak">
+<img src="anak-salus4.jpg" loading="lazy">
+<div class="kategori anak">Anak</div>
+<div class="nama">Anak Salus 4</div>
+</div>
+
+</div>
+
+<button class="prev" onclick="geser(-1)">❮</button>
+<button class="next" onclick="geser(1)">❯</button>
+</div>
+
 <div class="card">
-  <h3>2026</h3>
-  <p class="info">
-    <br><br>
-  </p>
+<h3>📊 Statistik</h3>
+<p>Total: <span id="total"></span></p>
+<p>Induk: <span id="induk"></span></p>
+<p>Anak: <span id="anak"></span></p>
+</div>
+
+<div class="card">
+<h3>2026</h3>
+<p class="info"><br><br></p>
+</div>
+
+<!-- VIDEO PLAYER BARU -->
+<div class="card video-box">
+<h3 class="video-title">2026:4:23/11:45</h3>
+
+<div class="video-player-wrap">
+
+<!-- GANTI video1.mp4 dengan video kamu -->
+<video id="videoPlayer" controls preload="metadata">
+<source src="video1.mp4" type="video/mp4">
+Browser tidak mendukung video.
+</video>
+
+</div>
+
+
+
+<div class="video-list">
+</div>
+
+<p class="video-note">
+
+</p>
 </div>
 
 </div>
@@ -267,52 +337,56 @@ header{
 let index=0;
 
 function geser(a){
-  const s=document.getElementById("slides");
-  const total=s.children.length;
-
-  index+=a;
-  if(index<0) index=total-1;
-  if(index>=total) index=0;
-
-  s.style.transform="translateX(-"+(index*100)+"%)";
+ const s=document.getElementById('slides');
+ const total=s.children.length;
+ index+=a;
+ if(index<0) index=total-1;
+ if(index>=total) index=0;
+ s.style.transform='translateX(-'+(index*100)+'%)';
 }
 
-// SWIPE
 let startX=0;
-const slider=document.querySelector(".slider");
+const slider=document.querySelector('.slider');
 
-slider.addEventListener("touchstart",e=>{
-  startX=e.touches[0].clientX;
+slider.addEventListener('touchstart',e=>{
+ startX=e.touches[0].clientX;
 });
 
-slider.addEventListener("touchend",e=>{
-  let endX=e.changedTouches[0].clientX;
-
-  if(startX-endX>50) geser(1);
-  if(endX-startX>50) geser(-1);
+slider.addEventListener('touchend',e=>{
+ let endX=e.changedTouches[0].clientX;
+ if(startX-endX>50) geser(1);
+ if(endX-startX>50) geser(-1);
 });
 
-// STATISTIK
 function hitung(){
-  const semua=document.querySelectorAll(".slide");
+ const semua=document.querySelectorAll('.slide');
+ let total=semua.length;
+ let induk=0;
+ let anak=0;
 
-  let total=semua.length;
-  let induk=0;
-  let anak=0;
+ semua.forEach(s=>{
+ let k=s.getAttribute('data-kategori');
+ if(k==='induk') induk++;
+ if(k==='anak') anak++;
+ });
 
-  semua.forEach(s=>{
-    let k=s.getAttribute("data-kategori");
-    if(k==="induk") induk++;
-    if(k==="anak") anak++;
-  });
-
-  document.getElementById("total").innerText=total;
-  document.getElementById("induk").innerText=induk;
-  document.getElementById("anak").innerText=anak;
+ document.getElementById('total').innerText=total;
+ document.getElementById('induk').innerText=induk;
+ document.getElementById('anak').innerText=anak;
 }
 
 hitung();
+
+/* VIDEO SWITCHER */
+function gantiVideo(file){
+const v=document.getElementById('videoPlayer');
+v.src=file;
+v.load();
+v.play();
+}
 </script>
 
 </body>
 </html>
+```
+
