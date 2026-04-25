@@ -10,12 +10,20 @@
 <body>
 
 <header class="hero">
+<div class="hero-glow"></div>
 <h1>🐐 Peternakan Pak Saleh</h1>
 <p></p>
+<div class="hero-badges">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </header>
 
 <div class="container">
 
+<section class="slider-wrap">
+<h2 class="section-title"></h2>
 <section class="slider">
 <div class="slides" id="slides">
 <div class='slide'><img src='salus.jpg'><div class='badge'>Induk</div><div class='nama'>Salus</div></div>
@@ -40,33 +48,46 @@
 <button class="prev" onclick="geser(-1)">❮</button>
 <button class="next" onclick="geser(1)">❯</button>
 </section>
-
-<section class="cards">
-<div class="card stat"><h3>Total</h3><div class="big">18</div></div>
-<div class="card stat"><h3>Induk</h3><div class="big">8</div></div>
-<div class="card stat"><h3>Anak</h3><div class="big">10</div></div>
 </section>
 
+<section class="cards">
+<div class="card stat glow-card">
+<div class="icon">🐐</div>
+<h3>Total</h3>
+<div class="big">18</div>
+</div>
 
+<div class="card stat glow-card">
+<div class="icon">🧬</div>
+<h3>Induk</h3>
+<div class="big">8</div>
+</div>
 
-<section class="card">
-<h2></h2>
+<div class="card stat glow-card">
+<div class="icon">🍼</div>
+<h3>Anak</h3>
+<div class="big">10</div>
+</div>
+</section>
+
+<section class="card farm-card">
+<h2 class="section-title">Informasi Kandang</h2>
 <div class="info-slider">
 <div class="info-slides" id="infoSlides">
 <div class="info-slide">
 <img src="kandang1.webp">
-<h3></h3>
-<p>kandang 1</p>
+<h3>Kandang 1</h3>
+<p></p>
 </div>
 <div class="info-slide">
 <img src="kandang2.webp">
-<h3></h3>
-<p>kandang 2</p>
+<h3>Kandang 2</h3>
+<p></p>
 </div>
 <div class="info-slide">
 <img src="kandang3.webp">
-<h3></h3>
-<p>kandang 3</p>
+<h3>Kandang 3</h3>
+<p></p>
 </div>
 </div>
 <div id="dots2" class="dots info-dots"></div>
@@ -75,8 +96,12 @@
 </div>
 </section>
 
-<section class="card">
+<section class="card gallery-card">
+<div class="title-row">
 <h2>21 April 2024 17:15</h2>
+<span>Galeri Dokumentasi</span>
+</div>
+
 <div class="gallery">
 <img src="g1.webp" onclick="openModal(this.src)">
 <img src="g2.webp" onclick="openModal(this.src)">
@@ -85,7 +110,9 @@
 </div>
 </section>
 
-
+<footer>
+© 2026 Peternakan Pak Saleh
+</footer>
 
 </div>
 
@@ -154,8 +181,10 @@ function openModal(src){
 document.getElementById('modal').style.display='flex';
 document.getElementById('modalImg').src=src;
 }
+
 function closeModal(){
-document.getElementById('modal').style.display='none';}
+document.getElementById('modal').style.display='none';
+}
 
 updateSlider();
 updateInfo();
