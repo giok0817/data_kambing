@@ -5,303 +5,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Peternakan Pak Saleh</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
---glass:rgba(255,255,255,.08);
---line:rgba(255,255,255,.12);
-}
-body{
-font-family:system-ui,Arial;
-background:
-radial-gradient(circle at top right,#00c85322,transparent 30%),
-linear-gradient(135deg,#08141d,#102937,#1d4657);
-color:#fff;
-min-height:100vh;
-}
-header{
-margin:14px;
-padding:18px;
-text-align:center;
-font-size:30px;
-font-weight:800;
-letter-spacing:.5px;
-border:1px solid var(--line);
-background:var(--glass);
-backdrop-filter:blur(18px);
-border-radius:30px;
-box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
-.container{max-width:1150px;margin:auto;padding:14px}
-.slider{
-position:relative;
-height:72vh;
-overflow:hidden;
-border-radius:34px;
-box-shadow:0 25px 60px rgba(0,0,0,.35);
-}
-.slides{display:flex;height:100%;transition:transform .6s ease}
-.slide{min-width:100%;position:relative}
-.slide img{width:100%;height:100%;object-fit:cover}
-.slide:after{
-content:"";
-position:absolute;inset:0;
-background:linear-gradient(transparent 35%,rgba(0,0,0,.7));
-}
-.badge{
-position:absolute;top:18px;left:18px;z-index:3;
-padding:10px 16px;border-radius:30px;
-background:linear-gradient(45deg,#00c853,#00e676);
-font-weight:700;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-.badge.anak{background:linear-gradient(45deg,#ff9800,#ffc107)}
-.sold{
-position:absolute;z-index:3;top:50%;left:50%;
-transform:translate(-50%,-50%) rotate(-8deg);
-padding:14px 30px;
-background:#ff1744;
-border-radius:18px;
-font-weight:900;
-font-size:24px;
-}
-.nama{
-position:absolute;
-z-index:3;
-left:18px;right:18px;bottom:18px;
-padding:18px;
-text-align:center;
-font-size:28px;
-font-weight:800;
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(14px);
-border-radius:22px;
-}
-.prev,.next{
-position:absolute;top:50%;transform:translateY(-50%);
-width:58px;height:58px;
-border:none;border-radius:50%;
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(12px);
-font-size:28px;color:white;
-z-index:4;cursor:pointer;
-}
-.prev{left:14px}.next{right:14px}
-.dots{
-position:absolute;
-bottom:95px;
-width:100%;
-display:flex;
-justify-content:center;
-gap:8px;
-z-index:4;
-}
-.dot{
-width:10px;height:10px;border-radius:50%;
-background:#ffffff66;
-}
-.dot.active{background:#fff;transform:scale(1.35)}
-.card{
-margin-top:22px;
-padding:24px;
-border-radius:30px;
-background:var(--glass);
-backdrop-filter:blur(18px);
-border:1px solid var(--line);
-box-shadow:0 12px 35px rgba(0,0,0,.22);
-}
-.title{
-font-size:26px;
-font-weight:800;
-margin-bottom:18px;
-}
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:16px;
-}
-.stat{
-padding:28px;
-text-align:center;
-border-radius:28px;
-background:rgba(255,255,255,.06);
-}
-.stat small{font-size:16px;opacity:.8}
-.num{
-margin-top:8px;
-font-size:44px;
-font-weight:900;
-}
-.video-wrap{
-overflow:hidden;
-border-radius:24px;
-box-shadow:0 15px 35px rgba(0,0,0,.3)
-}
-video{width:100%;display:block;background:#000}
-.info{
-line-height:1.8;
-opacity:.9;
-font-size:15px;
-}
-footer{
-text-align:center;
-padding:30px 10px;
-opacity:.7
-}
-@media(max-width:768px){
-header{font-size:22px}
-.slider{height:58vh;border-radius:24px}
-.nama{font-size:20px}
-.num{font-size:34px}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>🐐 Peternakan Pak Saleh</header>
-<div class='container'>
 
-<div class='slider'>
-<div class='slides' id='slides'>
+<header class="hero">
+<h1>🐐 Peternakan Pak Saleh</h1>
+<p></p>
+</header>
 
-<div class='slide'>
-<img src='salus.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Salus</div>
+<div class="container">
+
+<section class="slider">
+<div class="slides" id="slides">
+<div class='slide'><img src='salus.jpg'><div class='badge'>Induk</div><div class='nama'>Salus</div></div>
+<div class='slide'><img src='rino.jpg'><div class='badge'>Induk</div><div class='nama'>Rino</div></div>
+<div class='slide'><img src='asep.jpg'><div class='badge'>Induk</div><div class='nama'>Asep</div></div>
+<div class='slide'><img src='coklat.jpg'><div class='badge'>Induk</div><div class='nama'>Coklat</div></div>
+<div class='slide'><img src='putih.jpg'><div class='badge'>Induk</div><div class='nama'>Putih</div></div>
+<div class='slide'><img src='white.jpg'><div class='badge'>Induk</div><div class='nama'>White</div></div>
+<div class='slide'><img src='jawa.jpg'><div class='badge'>Induk</div><div class='nama'>Jawa</div></div>
+<div class='slide'><img src='hitam2.jpg'><div class='badge'>Induk</div><div class='nama'>Hitam 2</div></div>
+<div class='slide'><img src='anak-coklat-1.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Coklat 1</div></div>
+<div class='slide'><img src='anak-coklat-2.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Coklat 2</div></div>
+<div class='slide'><img src='anak-salus-1.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Salus 1</div></div>
+<div class='slide'><img src='anak-salus-2.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Salus 2</div></div>
+<div class='slide'><img src='anak-jawa.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Jawa</div></div>
+<div class='slide'><img src='si-kembar.jpg'><div class='badge anak'>Anak</div><div class='nama'>Si Kembar</div></div>
+<div class='slide'><img src='anak-asep.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Asep</div></div>
+<div class='slide'><img src='anak-salus3.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Salus 3</div></div>
+<div class='slide'><img src='anak-salus4.jpg'><div class='badge anak'>Anak</div><div class='nama'>Anak Salus 4</div></div>
 </div>
+<div id="dots" class="dots"></div>
+<button class="prev" onclick="geser(-1)">❮</button>
+<button class="next" onclick="geser(1)">❯</button>
+</section>
 
-<div class='slide'>
-<img src='hitam.jpg'>
-<div class='sold'>SOLD OUT</div>
-<div class='badge'>Induk</div>
-<div class='nama'>Hitam</div>
-</div>
+<section class="cards">
+<div class="card stat"><h3>Total</h3><div class="big">18</div></div>
+<div class="card stat"><h3>Induk</h3><div class="big">8</div></div>
+<div class="card stat"><h3>Anak</h3><div class="big">10</div></div>
+</section>
 
-<div class='slide'>
-<img src='rino.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Rino</div>
-</div>
 
-<div class='slide'>
-<img src='asep.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Asep</div>
-</div>
 
-<div class='slide'>
-<img src='coklat.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Coklat</div>
+<section class="card">
+<h2></h2>
+<div class="info-slider">
+<div class="info-slides" id="infoSlides">
+<div class="info-slide">
+<img src="kandang1.webp">
+<h3></h3>
+<p>kandang 1</p>
 </div>
+<div class="info-slide">
+<img src="kandang2.webp">
+<h3></h3>
+<p>kandang 2</p>
+</div>
+<div class="info-slide">
+<img src="kandang3.webp">
+<h3></h3>
+<p>kandang 3</p>
+</div>
+</div>
+<div id="dots2" class="dots info-dots"></div>
+<button class="prev" onclick="geserInfo(-1)">❮</button>
+<button class="next" onclick="geserInfo(1)">❯</button>
+</div>
+</section>
 
-<div class='slide'>
-<img src='putih.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Putih</div>
+<section class="card">
+<h2>21 April 2024 17:15</h2>
+<div class="gallery">
+<img src="g1.webp" onclick="openModal(this.src)">
+<img src="g2.webp" onclick="openModal(this.src)">
+<img src="g3.webp" onclick="openModal(this.src)">
+<img src="g4.webp" onclick="openModal(this.src)">
 </div>
+</section>
 
-<div class='slide'>
-<img src='white.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>White</div>
-</div>
 
-<div class='slide'>
-<img src='jawa.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Jawa</div>
-</div>
-
-<div class='slide'>
-<img src='hitam2.jpg'>
-<div class='badge'>Induk</div>
-<div class='nama'>Hitam 2</div>
-</div>
-
-<div class='slide'>
-<img src='anak-coklat-1.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Coklat 1</div>
-</div>
-
-<div class='slide'>
-<img src='anak-coklat-2.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Coklat 2</div>
-</div>
-
-<div class='slide'>
-<img src='anak-salus-1.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Salus 1</div>
-</div>
-
-<div class='slide'>
-<img src='anak-salus-2.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Salus 2</div>
-</div>
-
-<div class='slide'>
-<img src='anak-jawa.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Jawa</div>
-</div>
-
-<div class='slide'>
-<img src='si-kembar.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Si Kembar</div>
-</div>
-
-<div class='slide'>
-<img src='anak-asep.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Asep</div>
-</div>
-
-<div class='slide'>
-<img src='anak-salus3.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Salus 3</div>
-</div>
-
-<div class='slide'>
-<img src='anak-salus4.jpg'>
-<div class='badge anak'>Anak</div>
-<div class='nama'>Anak Salus 4</div>
-</div>
 
 </div>
-<div class='dots' id='dots'></div>
-<button class='prev' onclick='geser(-1)'>❮</button>
-<button class='next' onclick='geser(1)'>❯</button>
-</div>
 
-<div class='card'>
-<div class='title'>📊 Statistik Ternak</div>
-<div class='stats'>
-<div class='stat'><small>Total</small><div id='total' class='num'></div></div>
-<div class='stat'><small>Induk</small><div id='induk' class='num'></div></div>
-<div class='stat'><small>Anak</small><div id='anak' class='num'></div></div>
-</div>
-</div>
-
-<div class='card'>
-<div class='title'>2026:4:23/11:45</div>
-<div class='video-wrap'>
-<video controls>
-<source src='video1.mp4' type='video/mp4'>
-</video>
-</div>
-</div>
-
-<div class='card'>
-<div class='title'></div>
-<div class='info'></div>
-</div>
-
-<footer>Peternakan Pak Saleh</footer>
+<div id="modal" class="modal" onclick="closeModal()">
+<img id="modalImg">
 </div>
 
 <script>
@@ -317,55 +106,60 @@ d.onclick=()=>{index=i;updateSlider()};
 dots.appendChild(d);
 }
 
-function updateDots(){
-document.querySelectorAll('.dot').forEach((d,i)=>{
-d.classList.toggle('active',i===index)
-})
-}
-
 function updateSlider(){
 slides.style.transform='translateX(-'+(index*100)+'%)';
-updateDots();
+document.querySelectorAll('#dots .dot').forEach((d,i)=>d.classList.toggle('active',i===index));
 }
 
 function geser(a){
 index+=a;
-if(index<0) index=total-1;
-if(index>=total) index=0;
+if(index<0)index=total-1;
+if(index>=total)index=0;
 updateSlider();
 }
 
-setInterval(()=>geser(1),5000);
-
-let startX=0;
-document.querySelector('.slider').addEventListener('touchstart',e=>{
-startX=e.touches[0].clientX;
-});
-
+let sx=0;
+document.querySelector('.slider').addEventListener('touchstart',e=>sx=e.touches[0].clientX);
 document.querySelector('.slider').addEventListener('touchend',e=>{
-let endX=e.changedTouches[0].clientX;
-if(startX-endX>50)geser(1);
-if(endX-startX>50)geser(-1);
+let ex=e.changedTouches[0].clientX;
+if(sx-ex>50)geser(1);
+if(ex-sx>50)geser(-1);
 });
 
-function hitung(){
-let all=document.querySelectorAll('.slide');
-let induk=0,anak=0;
-all.forEach(s=>{
-/* Hitam SOLD OUT tidak dihitung, Si Kembar dihitung 2 */
-if(s.querySelector('.sold')) return;
-if(s.querySelector('.nama') && s.querySelector('.nama').textContent.includes('Si Kembar')) { anak+=2; return; }
-if(s.querySelector('.anak')) anak++;
-else induk++;
-});
-document.getElementById('total').innerText=all.length;
-document.getElementById('induk').innerText=induk;
-document.getElementById('anak').innerText=anak;
+let infoIndex=0;
+const infoSlides=document.getElementById('infoSlides');
+const dots2=document.getElementById('dots2');
+const infoTotal=infoSlides.children.length;
+
+for(let i=0;i<infoTotal;i++){
+let d=document.createElement('div');
+d.className='dot';
+d.onclick=()=>{infoIndex=i;updateInfo()};
+dots2.appendChild(d);
 }
 
-updateDots();
-hitung();
+function updateInfo(){
+infoSlides.style.transform='translateX(-'+(infoIndex*100)+'%)';
+document.querySelectorAll('#dots2 .dot').forEach((d,i)=>d.classList.toggle('active',i===infoIndex));
+}
+
+function geserInfo(a){
+infoIndex+=a;
+if(infoIndex<0)infoIndex=infoTotal-1;
+if(infoIndex>=infoTotal)infoIndex=0;
+updateInfo();
+}
+
+function openModal(src){
+document.getElementById('modal').style.display='flex';
+document.getElementById('modalImg').src=src;
+}
+function closeModal(){
+document.getElementById('modal').style.display='none';}
+
+updateSlider();
+updateInfo();
 </script>
+
 </body>
 </html>
-```
